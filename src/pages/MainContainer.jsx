@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import Card from '../components/Card';
-import { creativeCards } from '../constants';
+import { creativeCards } from '../api';
 
-const MainContainer = ({ handleGenerateClick, handleCreateClick }) => {
+const MainContainer = ({ cards , handleGenerateClick, handleCreateClick, handleDeleteClick }) => {
  
     return (
       <div className='main-wrapper'>
@@ -12,11 +12,13 @@ const MainContainer = ({ handleGenerateClick, handleCreateClick }) => {
           <button className='create' onClick={handleCreateClick}>Create New Congratulation</button>
         </div>
         <div className='main-field'>
-          {Array.isArray(creativeCards) && creativeCards.map((card) => (
+          {Array.isArray(cards) && cards.map((card) => (
       <Card
+        id={card.id}
         title={card.title}
         message={card.message}
-        image={card.image}
+        imgURL={card.imgURL}
+        handleDeleteClick={() => handleDeleteClick(card.id)}
       />
     ))}
         </div>

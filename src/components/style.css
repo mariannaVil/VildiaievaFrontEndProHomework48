@@ -31,15 +31,16 @@ background-image: url('/public/img/backgroung_picture.jpg');
     background-color: aliceblue;
 }
 
-.img-wrapper {
-    display: inline-block;
-    text-align: center;
-}
-
-.card img {
-    width: 75%;
-    height: auto;
-    margin-bottom: 15px;
+.delete {
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: coral;
+    background-color: aliceblue;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 5px;
+    margin: 10px;
 }
 
 .title {
@@ -56,6 +57,13 @@ background-image: url('/public/img/backgroung_picture.jpg');
     font-style: italic;
     font-weight: lighter;
     text-align: center;
+}
+
+.url {
+    font-size: 15px;
+    color: coral;
+    text-align: center;
+
 }
 
 .modal {
